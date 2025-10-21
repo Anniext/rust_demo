@@ -38,7 +38,18 @@ jobs:
             - name: Lint rust sources
               run: cargo clippy --all-targets --all-features --tests --benches -- -D warnings
             - name: Execute rust tests
-              run: cargo nextest run --all-features
+              run: |
+                  cargo llvm-cov nextest --all-features --lcov --output-path lcov.info \
+                   --message-format junit --output-file junit.xml
+            - uses: codecov/codecov-action@v5
+              with:
+                  files: lcov.info
+                  token: ${{ secrets.CODECOV_TOKEN }}
+            - uses: actions/upload-artifact@v4
+              if: success() || failure()
+              with:
+                  name: junit
+                  path: junit.xml
             - name: Generate a changelog
               uses: orhun/git-cliff-action@v4
               id: git-cliff
