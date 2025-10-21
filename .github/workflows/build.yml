@@ -54,7 +54,7 @@ jobs:
               with:
                   body: ${{ steps.git-cliff.outputs.content }}
     changelog:
-        needs: build-ts
+        needs: build-rust
         if: github.event_name == 'push' && github.ref_name == 'master'
         runs-on: ubuntu-latest
         permissions:
