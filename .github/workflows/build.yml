@@ -40,10 +40,9 @@ jobs:
             - name: Run tests with nextest & coverage
               run: |
                   cargo llvm-cov nextest \
-                      --all-features \
-                      --lcov --output-path lcov.info \
-                      -- \
-                      --message-format junit --output-file junit.xml
+                   --all-features \
+                   --lcov --output-path lcov.info \
+                   --message-format junit --output-file junit.xml
             - uses: codecov/codecov-action@v5
               with:
                   files: lcov.info
