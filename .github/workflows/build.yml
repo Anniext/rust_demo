@@ -41,17 +41,11 @@ jobs:
               run: |
                   cargo llvm-cov nextest \
                    --all-features \
-                   --lcov --output-path lcov.info \
-                   --message-format junit --output-file junit.xml
+                   --lcov --output-path lcov.info
             - uses: codecov/codecov-action@v5
               with:
                   files: lcov.info
                   token: ${{ secrets.CODECOV_TOKEN }}
-            - uses: actions/upload-artifact@v4
-              if: success() || failure()
-              with:
-                  name: junit
-                  path: junit.xml
             - name: Generate a changelog
               uses: orhun/git-cliff-action@v4
               id: git-cliff
