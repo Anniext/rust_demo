@@ -19,10 +19,12 @@ All notable changes to this project will be documented in this file. See [conven
 - update CHANGELOG.md - ([ef917e0](https://github.com/Anniext/demo/commit/ef917e07b058a42d37a926592dadea69b4903bd5)) - Anniext
 - update CHANGELOG.md - ([0eb6687](https://github.com/Anniext/demo/commit/0eb6687fe5f13e541933cb3c3019cb3bf26fd289)) - Anniext
 - update CHANGELOG.md - ([742fe73](https://github.com/Anniext/demo/commit/742fe73b2fb998c0044f1c14eb28751407373bc0)) - Anniext
+- update CHANGELOG.md - ([797a3eb](https://github.com/Anniext/demo/commit/797a3ebc33a00117ae8d5170f02401d575e8c6d7)) - Anniext
 
 ### Other
 
 - Merge branch 'master' of https://github.com/Anniext/rust_demo - ([9b9e788](https://github.com/Anniext/demo/commit/9b9e78828f6163d8ac360f924b401495153df45c)) - xt
+- Update cargo-generate.toml - ([a4ab21a](https://github.com/Anniext/demo/commit/a4ab21a06c7818cac4941dab720bbd54ebb9ecab)) - tang an
 
 ---
 ## [1.0.0] - 2025-10-21
